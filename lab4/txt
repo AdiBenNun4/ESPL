@@ -1,0 +1,41 @@
+Instructions to fixing files for tasks 2,3,4. Where there are multiple arguments, press enter after each one.
+
+task 2-
+look up the adress of _start with readelf -s deep_thought in the terminal
+set unit size to 4 (menu-3, then 4)
+insert that adress with the bytes in reverse into the buffer with memory modify (menu- 8, then 0, [_start adress]). To clarify, we were given adress 08048156 by the command- insert it as 56810408.
+set file name to "deep_thought" (menu-2, then deep_thought)
+put the buffer into the file with offset 18 (menu- 7, then 0,18,1)
+quit (menu-9)
+
+ 
+task 3-
+enter readelf -s offensive into the terminal
+calculate the offset of main, or just use the value we found- 41d
+run hexeditplus ./hexeditplus
+set the filename- menu-2 ,then offensive
+insert c3 to the memorybuffer (menu- 8 then 0, c3)
+put the buffer into the file with offset 41d (7, then 0, 41d, 1)
+
+task4 -
+enter readelf -S ntsc into the terminal
+see .text address ant offset -both are 410 (the function is in text section)
+enter readelf -s ntsc into the terminal
+see digit_cnt address - 577
+calculate section_file_offset + function_virtual_address - section_virtual_address:
+410+577-410 = 577
+
+enter readelf -S task4 into the terminal
+see .text address ant offset -both are 3f0 (the function is in text section)
+enter readelf -s ntsc into the terminal
+see func address - 4ed
+see func size - 99
+calculate location : 3f0+4ed-3f0=4ed
+
+run hexeditplus ./hexeditplus
+set the filename- menu-2 ,then task4
+load relevant part into buffer- 4, then  4ed, 99 
+set the filename- menu-2 ,then ntsc
+enter to the menu- 7, 0, 577, 99
+
+

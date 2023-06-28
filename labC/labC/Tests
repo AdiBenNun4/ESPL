@@ -1,0 +1,14 @@
+(parent_process>forking…)
+(child1>redirecting stdout to the write end of the pipe…)
+(child1>going to execute cmd: …)
+(parent_process>forking…)
+(parent_process>created process with id:2067
+(parent_process>closing the write end of the pipe…)
+(child2>redirecting stdout to the write end of the pipe…)
+(child2>going to execute cmd: …)
+(parent_process>forking…)
+(parent_process>created process with id:2067
+(parent_process>closing the write end of the pipe…)
+(parent_process>closing the read end of the pipe…)
+(parent_process>waiting for child processes to terminate…)
+(parent_process>exiting…)
